@@ -40,6 +40,15 @@ class PlanetController extends Controller
     {
         //このクラスは他のアクションにも影響。
         $planet = new Planet;
+        //$requireでユーザーからの値をうけとる
+        $planet->name = $request->name;
+        $planet->enname = $request->enname;
+        $planet->radius = $request->radius;
+        $planet->weight = $request->weight;
+        //インスタンスに値を設定し保存
+        $planet->save();
+        //登録したら一覧画面(index URL：planets)に戻る
+        return redirect('/planets');
 
     }
 
@@ -64,7 +73,8 @@ class PlanetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $planet = Planet::find($id);
+        return view('edit.show', ['planet' => $planet]);
     }
 
     /**
@@ -76,7 +86,17 @@ class PlanetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         //このクラスは他のアクションにも影響。
+        $planet = Planet::find($id);
+        //値の更新
+        $planet->name = $request->name;
+        $planet->enname = $request->enname;
+        $planet->radius = $request->radius;
+        $planet->weight = $request->weight;
+        //インスタンスに値を設定し保存
+        $planet->save();
+        //登録したら一覧画面(index URL：planets)に戻る
+        return redirect('/planets');
     }
 
     /**
@@ -87,6 +107,11 @@ class PlanetController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //インスタンス生成
+        $planet=Planet::find($id);
+        //インスタンスに値を設定し保存
+        $planet->delete();
+        //削除したら一覧画面(index URL：planets)に戻る
+        return redirect('/planets');
     }
 }
