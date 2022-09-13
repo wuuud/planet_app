@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Planet;
-use App\Models\Planets;
-use Illuminate\Http\Request;
+use App\Http\Requests\PlanetRequest;
 
 class PlanetController extends Controller
 {
@@ -36,7 +35,7 @@ class PlanetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlanetRequest $request)
     {
         //このクラスは他のアクションにも影響。
         $planet = new Planet;
@@ -84,7 +83,7 @@ class PlanetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PlanetRequest $request, $id)
     {
          //このクラスは他のアクションにも影響。
         $planet = Planet::find($id);
