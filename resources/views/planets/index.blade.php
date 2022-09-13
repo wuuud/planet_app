@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+    <h1>惑星一覧</h1>
     
 </body>
 </html>

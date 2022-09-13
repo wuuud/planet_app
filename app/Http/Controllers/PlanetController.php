@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Planet;
 use App\Models\Planets;
+use Illuminate\Http\Request;
 
 class PlanetController extends Controller
 {
@@ -14,8 +15,8 @@ class PlanetController extends Controller
      */
     public function index()
     {
-        // $planets = Planet::all();
-        // return view('planets.index', ['planets' => $planets]);
+        $planets = Planet::all();
+        return view('planets.index', ['planets' => $planets]);
     }
 
     /**
@@ -25,7 +26,8 @@ class PlanetController extends Controller
      */
     public function create()
     {
-        
+        return view('planets.create');
+
     }
 
     /**
@@ -36,7 +38,9 @@ class PlanetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //このクラスは他のアクションにも影響。
+        $planet = new Planet;
+
     }
 
     /**

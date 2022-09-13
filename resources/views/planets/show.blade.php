@@ -14,7 +14,6 @@
     <h3>半径:{{ $planet->radius }}</h3>
     <h3>重量:{{ $planet->weight }}</h3>
 
-    <link rel="stylesheet" href="/planets">戻る
-    <a href="/memos">戻る</a>
+    <a href="/planets">戻る</a>
 </body>
 </html>
