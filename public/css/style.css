@@ -1,3 +1,16 @@
 .show_names{
     font-weight: bold;
 }
+
+.edit_back{
+    margin-top: 10px;
+}
+
+/* edit 戻るボタン */
+a:hover {
+  /* https://saruwakakun.com/html-css/basic/a-link */
+  color: skyblue;
+  font-size: 2em;/*文字サイズ2倍*/
+  font-weight: bold;
+}
+

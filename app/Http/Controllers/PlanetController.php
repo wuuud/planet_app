@@ -74,7 +74,7 @@ class PlanetController extends Controller
     public function edit($id)
     {
         $planet = Planet::find($id);
-        return view('edit.show', ['planet' => $planet]);
+        return view('planets.edit', ['planet' => $planet]);
     }
 
     /**
