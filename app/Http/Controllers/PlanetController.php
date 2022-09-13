@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Planets;
 
 class PlanetController extends Controller
 {
@@ -13,7 +14,8 @@ class PlanetController extends Controller
      */
     public function index()
     {
-        //
+        // $planets = Planet::all();
+        // return view('planets.index', ['planets' => $planets]);
     }
 
     /**
@@ -23,7 +25,7 @@ class PlanetController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -45,7 +47,9 @@ class PlanetController extends Controller
      */
     public function show($id)
     {
-        //
+        $planet = Planet::find($id);
+        return view('planets.show', ['planet' => $planet]);
+
     }
 
     /**

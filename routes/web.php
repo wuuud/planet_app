@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('planet', App\Http\Controllers\PlanetController::class);
+Route::resource('planet',
+    App\Http\Controllers\PlanetController
+    ::class);
