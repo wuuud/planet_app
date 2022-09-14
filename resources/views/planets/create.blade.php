@@ -42,13 +42,14 @@
             <label for="weight">重量</label>
             <input type="number" name="weight" value="{{ old('weight') }}">
 
-            <br>
+        <div>
             <input type="submit" value="登録">
-
+        </div>
     </form>
-    <div>
-        <a href="/planets" class="edit_back">戻る</a>
-    </div>
+    {{-- 間隔をあける方法 https://csshtml.work/spacing/#CSS --}}
+    <p>
+        <a href="/planets">戻る</a>
+    </p>
 </body>
 
 </html>

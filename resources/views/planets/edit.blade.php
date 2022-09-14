@@ -43,6 +43,8 @@
         </p>
         <input type="submit" value="更新">
     </form>
-    <a href="/planets" class="edit_back">戻る</a>
+    <p>
+    <a href="/planets">戻る</a>
+    </p>
 </body>
 </html>

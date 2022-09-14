@@ -28,8 +28,8 @@ class PlanetRequest extends FormRequest
             //alpha全てアルファベット入力
             //https://yutaro-blog.net/2021/05/05/laravel-validation-alpha/
             'enname' =>'required|string|alpha|max:100',
-            'radius' =>'required|integer|max:10',
-            'weight' =>'required|integer|max:10',
+            'radius' =>'required|integer|max:71492',
+            'weight' =>'required|integer|max:18993500',
         ];
     }
 

@@ -22,6 +22,7 @@
                 <th>重量</th>
                 <th>    </th>
                 <th>    </th>
+                 <th>    </th>
             </tr>
         </thead>
         {{-- 各詳細 --}}
@@ -33,6 +34,7 @@
                 <td>{{ $planet->radius }}</td>
                 <td>{{ $planet->weight }}</td>
                 <td><a href="/planets/{{ $planet->id }}">詳 細</a></td>
+                <td><a href="/planets/{{ $planet->id }}/edit">編 集</a></td>
                 <td>
                     <form action="/planets/{{ $planet->id }}" method="post">
                         @csrf

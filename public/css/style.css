@@ -1,26 +1,45 @@
-.show_names{
-    font-weight: bold;
-}
+.show_name {
+   display: flex left;
+   justify-content: space-evenly;
 
-.edit_back{
-    margin-top: 10px;
-}
-
-/* edit 戻るボタン */
-a:hover {
-  /* https://saruwakakun.com/html-css/basic/a-link */
-  color: rgb(61, 191, 247);
-  font-size: 1.5em;/*文字サイズ2倍*/
-  font-weight: bold;
 }
 
 .error {
     color: red;
 }
+
 /* https://proengineer.internous.co.jp/content/columnfeature/3912 */
 .table {
-font-family: "メイリオ", sans-serif;/* フォントのスタイルを指定する */
+    font-family: "メイリオ", sans-serif;
+    /* フォントのスタイルを指定する */
 }
-.td, th {
-padding: 10px; /* 要素の余白を指定する(上下左右) */
+
+.td,
+th {
+    padding: 10px;
+    /* 要素の余白を指定する(上下左右) */
+}
+
+/* https://rainbow-engine.com/jsp-text-right-align/ */
+/* labelには .が不要 */
+label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+a,input {
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+/* ボタンにマウスを持っていった時 */
+a:hover {
+    /* https://saruwakakun.com/html-css/basic/a-link */
+    color: rgb(61, 191, 247);
+    font-size: 1.5em;
+    /*文字サイズ2倍*/
+    font-weight: bold;
 }
