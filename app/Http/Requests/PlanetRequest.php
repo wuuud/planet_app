@@ -24,10 +24,13 @@ class PlanetRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'   =>'required|sritng|max:50',
-            'enname' =>'required|sritng|max:50',
-            'radius' =>'required|integer|max:200',
-            'weight' =>'required|integer|max:200',
+            'name'   =>'required|string|max:100',
+            //alpha全てアルファベット入力
+            //https://yutaro-blog.net/2021/05/05/laravel-validation-alpha/
+            'enname' =>'required|string|alpha|max:100',
+            'radius' =>'required|integer|max:10',
+            'weight' =>'required|integer|max:10',
         ];
     }
+
 }

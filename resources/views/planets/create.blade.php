@@ -36,15 +36,15 @@
         </p>
         <p>
             <label for="radius">半径</label>
-            <input type="text" name="radius" value="{{ old('radius') }}">
+            <input type="number" name="radius" value="{{ old('radius') }}">
         </p>
         <p>
             <label for="weight">重量</label>
-            <input type="text" name="weight" value="{{ old('weight') }}">
-    
-    <br>
-    <input type="submit" value="登録">
-   
+            <input type="number" name="weight" value="{{ old('weight') }}">
+
+            <br>
+            <input type="submit" value="登録">
+
     </form>
     <div>
         <a href="/planets" class="edit_back">戻る</a>

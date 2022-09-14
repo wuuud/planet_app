@@ -12,23 +12,27 @@
 <body>
     <h1>惑星一覧</h1>
 
-    <table>
+    <table border="1">
+        {{-- タイトル達 --}}
         <thead>
             <tr>
-                <th scope="col">名前</th>
-                <th scope="col">名前(英語)</th>
-                <th scope="col">半径</th>
-                <th scope="col">重量</th>
+                <th>名前</th>
+                <th>名前(英語)</th>
+                <th>半径</th>
+                <th>重量</th>
+                <th>    </th>
+                <th>    </th>
             </tr>
         </thead>
-        @foreach ($planets as $planet)
+        {{-- 各詳細 --}}
         <tbody>
+        @foreach ($planets as $planet)
             <tr>
                 <td>{{ $planet->name }}</td>
                 <td>{{ $planet->enname }}</td>
                 <td>{{ $planet->radius }}</td>
                 <td>{{ $planet->weight }}</td>
-                <td><a href="/planets/{{ $planet->id }}">詳細</a></td>
+                <td><a href="/planets/{{ $planet->id }}">詳 細</a></td>
                 <td>
                     <form action="/planets/{{ $planet->id }}" method="post">
                         @csrf
@@ -38,28 +42,12 @@
                 </td>
             </tr>
         </tbody>
+        {{-- @endforeach の位置が大切 --}}
         @endforeach
     </table>
-
-
-    {{-- <table>
-        @foreach ($planets as $planet)
-            <thead>
-                <tr>
-                    <td>{{ $planet->name }}</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ $planet->enname }}</td>
-                </tr>
-            </tbody>
-            <td>{{ $planet->radius }}</td>
-            <td>{{ $planet->weight }}</td>
-            </tr>
-        @endforeach
-
-    </table> --}}
+    </table>
+    
+    <br>
     <a href="/planets/create">新規登録</a>
 </body>
 

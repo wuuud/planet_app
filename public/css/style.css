@@ -9,11 +9,18 @@
 /* edit 戻るボタン */
 a:hover {
   /* https://saruwakakun.com/html-css/basic/a-link */
-  color: skyblue;
-  font-size: 2em;/*文字サイズ2倍*/
+  color: rgb(61, 191, 247);
+  font-size: 1.5em;/*文字サイズ2倍*/
   font-weight: bold;
 }
 
 .error {
     color: red;
+}
+/* https://proengineer.internous.co.jp/content/columnfeature/3912 */
+.table {
+font-family: "メイリオ", sans-serif;/* フォントのスタイルを指定する */
+}
+.td, th {
+padding: 10px; /* 要素の余白を指定する(上下左右) */
 }
