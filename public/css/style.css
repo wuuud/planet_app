@@ -39,7 +39,5 @@ a,input {
 a:hover {
     /* https://saruwakakun.com/html-css/basic/a-link */
     color: rgb(61, 191, 247);
-    font-size: 1.5em;
-    /*文字サイズ2倍*/
     font-weight: bold;
 }
